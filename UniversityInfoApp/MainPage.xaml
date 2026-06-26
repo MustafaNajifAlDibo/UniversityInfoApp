@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UniversityInfoApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Enter your Country"
+                FontSize="Medium" />
+            <Entry
+                x:Name="countryName"
+                Placeholder="Syria"/>
+            <Button
+                x:Name="SearchButton"
+                Text="Search"/>
+
+            <VerticalStackLayout x:Name="ContainerLayout" Spacing="10">
+                
+            </VerticalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
