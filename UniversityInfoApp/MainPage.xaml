@@ -13,13 +13,13 @@
                 FontSize="Medium" />
             <Entry
                 x:Name="countryName"
-                Placeholder="Syria"/>
+                Placeholder="Egypt"/>
             <Button
                 x:Name="SearchButton"
                 Text="Search"
                 Clicked="SearchButton_Clicked"/>
 
-            <ActivityIndicator x:Name="IndicatorLosing" IsVisible="False" IsRunning="False"/>
+            <ActivityIndicator x:Name="IndicatorLoading" IsVisible="False" IsRunning="False"/>
 
             <VerticalStackLayout x:Name="ContainerLayout" Spacing="10">
                 

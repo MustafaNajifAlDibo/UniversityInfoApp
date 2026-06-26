@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Diagnostics.Metrics;
+using System.Text.Json;
 using UniversityInfoApp.Code;
 using UniversityInfoApp.Models;
 using UniversityInfoApp.Views;
@@ -21,6 +22,11 @@ namespace UniversityInfoApp {
             // Clear
             _uniInfos.Clear();
             ContainerLayout.Clear();
+            // Display Indicator becaue long time response
+            IndicatorLoading.IsRunning = true;
+            IndicatorLoading.IsVisible = true;
+
+            countryName = countryName.Replace(" ", "+");
 
             // Get Responce and Fill UniInfo
             var response = 
@@ -32,6 +38,10 @@ namespace UniversityInfoApp {
                 var item = _uniInfos[i];
                 ContainerLayout.Add(new UnInfoView(item.name, item.web_pages[0]));
             }
+
+            // Hide the Indicator
+            IndicatorLoading.IsRunning = false;
+            IndicatorLoading.IsVisible = false;
         }
 
         private void SearchButton_Clicked(object sender, EventArgs e) {
