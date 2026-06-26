@@ -16,7 +16,10 @@
                 Placeholder="Syria"/>
             <Button
                 x:Name="SearchButton"
-                Text="Search"/>
+                Text="Search"
+                Clicked="SearchButton_Clicked"/>
+
+            <ActivityIndicator x:Name="IndicatorLosing" IsVisible="False" IsRunning="False"/>
 
             <VerticalStackLayout x:Name="ContainerLayout" Spacing="10">
                 

@@ -7,8 +7,8 @@
             <HorizontalStackLayout Spacing="10">
                 <Image HeightRequest="50" Source="university.png"/>
                 <VerticalStackLayout>
-                    <Label FontSize="Large" Text="UN Full Name"/>
-                    <Label TextColor="CadetBlue" FontSize="Medium" Text="www.website.com"/>
+                    <Label x:Name="UniName" FontSize="Large" Text="UN Full Name"/>
+                    <Label x:Name="UniWebsite" TextColor="CadetBlue" FontSize="Medium" Text="www.website.com"/>
                 </VerticalStackLayout>
             </HorizontalStackLayout>
         </VerticalStackLayout>
